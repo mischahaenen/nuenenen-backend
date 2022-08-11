@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_pages_rich_texts",
+  "info": {
+    "displayName": "richText",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "richText": {
+      "type": "richtext"
+    }
+  }
+}

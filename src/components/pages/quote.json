@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pages_quotes",
+  "info": {
+    "displayName": "Quote",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text"
+    },
+    "quoter": {
+      "type": "string"
+    }
+  }
+}
