@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_pages_groups",
+  "info": {
+    "displayName": "Group",
+    "icon": "photo-video"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

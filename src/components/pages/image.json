@@ -2,11 +2,12 @@
   "collectionName": "components_pages_images",
   "info": {
     "displayName": "Image",
-    "icon": "file-image"
+    "icon": "file-image",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "image": {
+    "Image": {
       "allowedTypes": [
         "images",
         "files",
@@ -14,10 +15,10 @@
         "audios"
       ],
       "type": "media",
-      "multiple": false
+      "multiple": true
     },
-    "caption": {
-      "type": "text"
+    "Caption": {
+      "type": "string"
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_pages_titles",
+  "info": {
+    "displayName": "title",
+    "icon": "indent"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

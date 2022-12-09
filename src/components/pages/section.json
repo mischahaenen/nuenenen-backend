@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pages_sections",
+  "info": {
+    "displayName": "section",
+    "icon": "bars"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

@@ -12,10 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
     "pageZone": {
@@ -23,8 +23,15 @@
       "components": [
         "pages.image",
         "pages.quote",
-        "pages.rich-text"
+        "pages.rich-text",
+        "pages.section"
       ]
+    },
+    "url": {
+      "type": "uid"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
