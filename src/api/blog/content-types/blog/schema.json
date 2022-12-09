@@ -42,8 +42,11 @@
       "target": "admin::user"
     },
     "description": {
-      "type": "richtext",
-      "required": true
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
