@@ -26,16 +26,6 @@
     "title": {
       "type": "string"
     },
-    "step": {
-      "type": "enumeration",
-      "enum": [
-        "Biberstufe",
-        "Wolfsstufe",
-        "Pfadistufe",
-        "Piostufe",
-        "Roverstufe"
-      ]
-    },
     "author": {
       "type": "relation",
       "relation": "oneToOne",
@@ -47,6 +37,11 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "step": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::step.step"
     }
   }
 }

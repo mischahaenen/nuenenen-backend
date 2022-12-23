@@ -18,9 +18,6 @@
     "Description": {
       "type": "richtext"
     },
-    "Kastenzeddel": {
-      "type": "richtext"
-    },
     "Quartalsprogramm": {
       "type": "media",
       "multiple": false,
@@ -39,14 +36,15 @@
       "component": "pages.group"
     },
     "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }

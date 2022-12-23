@@ -2,11 +2,12 @@
   "collectionName": "components_pages_titles",
   "info": {
     "displayName": "title",
-    "icon": "indent"
+    "icon": "indent",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string"
     }
   }

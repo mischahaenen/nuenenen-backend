@@ -24,7 +24,9 @@
         "pages.image",
         "pages.quote",
         "pages.rich-text",
-        "pages.section"
+        "pages.section",
+        "pages.blog",
+        "pages.event"
       ]
     },
     "url": {

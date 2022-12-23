@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_pages_events",
+  "info": {
+    "displayName": "Event",
+    "icon": "asterisk"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
+    }
+  }
+}

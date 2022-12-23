@@ -2,14 +2,15 @@
   "collectionName": "components_pages_sections",
   "info": {
     "displayName": "section",
-    "icon": "bars"
+    "icon": "bars",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string"
     },
-    "description": {
+    "Description": {
       "type": "richtext"
     }
   }
