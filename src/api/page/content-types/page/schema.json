@@ -26,7 +26,10 @@
         "pages.rich-text",
         "pages.section",
         "pages.blog",
-        "pages.event"
+        "pages.event",
+        "pages.group",
+        "pages.title",
+        "pages.steps"
       ]
     },
     "url": {

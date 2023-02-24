@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_pages_steps",
+  "info": {
+    "displayName": "Steps",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "steps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::step.step"
+    }
+  }
+}
