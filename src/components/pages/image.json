@@ -6,5 +6,20 @@
     "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
 }

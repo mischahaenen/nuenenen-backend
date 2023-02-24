@@ -1,26 +1,19 @@
 {
   "collectionName": "components_pages_groups",
   "info": {
-    "displayName": "Group",
-    "icon": "photo-video"
+    "displayName": "Team",
+    "icon": "photo-video",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Name": {
+    "Title": {
       "type": "string"
     },
-    "Description": {
-      "type": "text"
-    },
-    "Image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+    "admin_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "admin::user"
     }
   }
 }

@@ -40,9 +40,8 @@
     },
     "step": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::step.step",
-      "inversedBy": "blogs"
+      "relation": "oneToOne",
+      "target": "api::step.step"
     }
   }
 }
