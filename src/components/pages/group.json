@@ -10,10 +10,10 @@
     "Title": {
       "type": "string"
     },
-    "admin_users": {
+    "members": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "admin::user"
+      "target": "plugin::users-permissions.user"
     }
   }
 }

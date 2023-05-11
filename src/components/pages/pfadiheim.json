@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_pages_pfadiheims",
+  "info": {
+    "displayName": "Pfadiheim",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "iFrame": {
+      "type": "string"
+    }
+  }
+}
