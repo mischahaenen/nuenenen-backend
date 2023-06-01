@@ -39,8 +39,7 @@
         "pages.section",
         "pages.image",
         "pages.group",
-        "pages.document",
-        "pages.event"
+        "pages.document"
       ]
     }
   }
