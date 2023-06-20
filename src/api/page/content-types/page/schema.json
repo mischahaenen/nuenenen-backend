@@ -29,7 +29,8 @@
         "pages.group",
         "pages.title",
         "pages.steps",
-        "pages.pfadiheim"
+        "pages.pfadiheim",
+        "pages.testimonials"
       ]
     },
     "url": {

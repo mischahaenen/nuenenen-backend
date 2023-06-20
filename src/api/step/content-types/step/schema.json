@@ -39,7 +39,8 @@
         "pages.section",
         "pages.image",
         "pages.group",
-        "pages.document"
+        "pages.document",
+        "pages.kastenzeddel"
       ]
     }
   }
