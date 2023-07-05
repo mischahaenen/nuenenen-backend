@@ -22,7 +22,6 @@
       "type": "dynamiczone",
       "components": [
         "pages.image",
-        "pages.quote",
         "pages.rich-text",
         "pages.section",
         "pages.blog",
@@ -30,7 +29,8 @@
         "pages.title",
         "pages.steps",
         "pages.pfadiheim",
-        "pages.testimonials"
+        "pages.testimonials",
+        "pages.contact"
       ]
     },
     "url": {

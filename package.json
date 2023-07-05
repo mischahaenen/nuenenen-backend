@@ -14,9 +14,9 @@
     "@strapi/plugin-i18n": "4.9.0",
     "@strapi/plugin-users-permissions": "4.9.0",
     "@strapi/strapi": "4.9.0",
+    "axios": "^1.4.0",
     "better-sqlite3": "7.4.6",
     "pg": "^8.11.0",
-    "strapi-plugin-ezforms": "^0.1.5",
     "strapi-plugin-react-editorjs": "^2.0.1"
   },
   "author": {
