@@ -7,16 +7,11 @@ module.exports = ({ env }) => ({
         secretAccessKey: env('AWS_ACCESS_SECRET'),
         region: env('AWS_REGION'),
         params: {
-          ACL: env('AWS_ACL', 'public-read'),
-          signedUrlExpires: env('AWS_SIGNED_URL_EXPIRES', 15 * 60),
-          Bucket: env('AWS_BUCKET'),
+          Bucket: env('AWS_BUCKET_NAME'),
+          //StorageClass: env('AWS_S3_STORAGE_CLASSES') // Configure your Amazon S3 Storage Classes (including this to environment variable is not a must)
         },
-      },
-      actionOptions: {
-        upload: {},
-        uploadStream: {},
-        delete: {},
-      },
-    },
-  },
+        logger: console // Only if you want to `stdout` logs
+      }
+    }
+  }
 });
