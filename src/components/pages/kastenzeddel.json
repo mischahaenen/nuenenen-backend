@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_pages_kastenzeddels",
+  "info": {
+    "displayName": "Kastenzeddel"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    }
+  }
+}

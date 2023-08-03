@@ -14,6 +14,13 @@ module.exports = [
       },
     },
   },
+  {
+    name: "strapi::compression",
+    config: {
+      br: true,
+      gzip: true,
+    },
+  },
   "strapi::cors",
   "strapi::poweredBy",
   "strapi::logger",
