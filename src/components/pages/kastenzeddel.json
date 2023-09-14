@@ -1,7 +1,8 @@
 {
   "collectionName": "components_pages_kastenzeddels",
   "info": {
-    "displayName": "Kastenzeddel"
+    "displayName": "Kastenzeddel",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,12 +10,22 @@
       "type": "string"
     },
     "Description": {
+      "type": "richtext"
+    },
+    "StartDate": {
+      "type": "date"
+    },
+    "EndDate": {
+      "type": "date"
+    },
+    "Location": {
       "type": "string"
     },
-    "event": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::event.event"
+    "StartTime": {
+      "type": "time"
+    },
+    "EndTime": {
+      "type": "time"
     }
   }
 }
