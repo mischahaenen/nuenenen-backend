@@ -37,7 +37,7 @@ export default factories.createCoreController(
         await strapi.plugins["email"].services.email.send({
           to: contact.Email,
           from: "uvex@pfadi-nuenenen.ch",
-          subject: `Neue Nachricht von ${formData.firstname} ${formData.lastname}`,
+          subject: `Nachricht / ${formData.firstname} ${formData.firstname}`,
           html: `
           <html>
           <head>

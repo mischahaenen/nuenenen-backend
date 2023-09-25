@@ -19,6 +19,7 @@
     "axios": "^1.4.0",
     "better-sqlite3": "^7.4.6",
     "pg": "^8.11.0",
+    "strapi-plugin-populate-deep": "^3.0.0",
     "strapi-plugin-react-editorjs": "^2.0.1"
   },
   "author": {
