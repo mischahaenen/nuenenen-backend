@@ -42,6 +42,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::step.step"
+    },
+    "Rolle": {
+      "type": "string"
     }
   }
 }

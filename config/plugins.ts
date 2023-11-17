@@ -20,8 +20,8 @@ export default ({ env }) => ({
         apiKey: env("SENDGRID_API_KEY"),
       },
       settings: {
-        defaultFrom: "uvex@pfadi-nuenenen.ch",
-        defaultReplyTo: "uvex@pfadi-nuenenen.ch",
+        defaultFrom: "hallo@pfadi-nuenenen.ch",
+        defaultReplyTo: "hallo@pfadi-nuenenen.ch",
       },
     },
   },
