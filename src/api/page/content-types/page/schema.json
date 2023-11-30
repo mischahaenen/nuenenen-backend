@@ -22,15 +22,14 @@
       "type": "dynamiczone",
       "components": [
         "pages.image",
-        "pages.rich-text",
         "pages.section",
         "pages.blog",
-        "pages.group",
-        "pages.title",
         "pages.steps",
         "pages.pfadiheim",
         "pages.testimonials",
-        "pages.contact"
+        "pages.contact",
+        "pages.document",
+        "pages.sponsors"
       ]
     },
     "url": {

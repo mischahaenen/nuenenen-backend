@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_pages_sponsors",
+  "info": {
+    "displayName": "Sponsors",
+    "icon": "gift",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "sponsors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sponsor.sponsor"
+    },
+    "Description": {
+      "type": "richtext"
+    }
+  }
+}

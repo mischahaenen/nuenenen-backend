@@ -10,11 +10,6 @@
     "Title": {
       "type": "string"
     },
-    "posts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::blog.blog"
-    },
     "Description": {
       "type": "richtext"
     }
