@@ -38,7 +38,7 @@ export default factories.createCoreController(
           to: contact.Email,
           from: "hallo@pfadi-nuenenen.ch",
           replyTo: {
-            email: formData.Email,
+            email: formData.email,
             name: `${formData.firstname} ${formData.firstname}`,
           },
           subject: `Nachricht / ${formData.firstname} ${formData.firstname}`,
