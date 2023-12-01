@@ -1,8 +1,7 @@
 // ./src/api/contact/services/recaptcha.js
+import axios from "axios";
 
-const axios = require("axios");
-
-module.exports = {
+export default {
   async validate(token) {
     try {
       const response = await axios.get(
