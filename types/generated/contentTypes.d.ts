@@ -811,6 +811,41 @@ export interface ApiFooterFooter extends Schema.SingleType {
   };
 }
 
+export interface ApiNavigationNavigation extends Schema.SingleType {
+  collectionName: 'navigations';
+  info: {
+    singularName: 'navigation';
+    pluralName: 'navigations';
+    displayName: 'Navigation';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pages: Attribute.Relation<
+      'api::navigation.navigation',
+      'oneToMany',
+      'api::page.page'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::navigation.navigation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::navigation.navigation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPagePage extends Schema.CollectionType {
   collectionName: 'pages';
   info: {
@@ -972,6 +1007,7 @@ declare module '@strapi/types' {
       'api::contact.contact': ApiContactContact;
       'api::contact-distribution-list.contact-distribution-list': ApiContactDistributionListContactDistributionList;
       'api::footer.footer': ApiFooterFooter;
+      'api::navigation.navigation': ApiNavigationNavigation;
       'api::page.page': ApiPagePage;
       'api::sponsor.sponsor': ApiSponsorSponsor;
       'api::step.step': ApiStepStep;
