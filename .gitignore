@@ -10,13 +10,11 @@ Icon
 .Trashes
 ._*
 
-
 ############################
 # Linux
 ############################
 
 *~
-
 
 ############################
 # Windows
@@ -30,7 +28,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-
 
 ############################
 # Packages
@@ -60,7 +57,6 @@ $RECYCLE.BIN/
 *.out
 *.pid
 
-
 ############################
 # Logs and databases
 ############################
@@ -70,7 +66,6 @@ $RECYCLE.BIN/
 *.sql
 *.sqlite
 *.sqlite3
-
 
 ############################
 # Misc.
@@ -111,7 +106,6 @@ exports
 dist
 build
 .strapi-updater.json
-
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,yarn,webstorm+all,strapi
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,yarn,webstorm+all,strapi
