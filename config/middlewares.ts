@@ -1,4 +1,5 @@
-module.exports = [
+// change to typescript module
+export default [
   "strapi::errors",
   {
     name: "strapi::security",
@@ -6,7 +7,7 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:'],
+          "connect-src": ["'self'", "https:"],
           "img-src": ["*"],
           "media-src": ["*"],
           upgradeInsecureRequests: null,
