@@ -29,13 +29,20 @@
         "pages.testimonials",
         "pages.contact",
         "pages.document",
-        "pages.sponsors"
+        "pages.sponsors",
+        "pages.group"
       ]
     },
     "url": {
       "type": "uid"
     },
     "slug": {
+      "type": "string"
+    },
+    "ActionButtonName": {
+      "type": "string"
+    },
+    "ActionButtonLink": {
       "type": "string"
     }
   }

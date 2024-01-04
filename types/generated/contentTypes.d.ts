@@ -870,11 +870,14 @@ export interface ApiPagePage extends Schema.CollectionType {
         'pages.testimonials',
         'pages.contact',
         'pages.document',
-        'pages.sponsors'
+        'pages.sponsors',
+        'pages.group'
       ]
     >;
     url: Attribute.UID;
     slug: Attribute.String;
+    ActionButtonName: Attribute.String;
+    ActionButtonLink: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -941,7 +944,9 @@ export interface ApiStepStep extends Schema.CollectionType {
         'pages.image',
         'pages.group',
         'pages.document',
-        'pages.kastenzeddel'
+        'pages.kastenzeddel',
+        'pages.quartalsprogramm',
+        'pages.testimonials'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -950,6 +955,31 @@ export interface ApiStepStep extends Schema.CollectionType {
     createdBy: Attribute.Relation<'api::step.step', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::step.step', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTeamTeam extends Schema.CollectionType {
+  collectionName: 'teams';
+  info: {
+    singularName: 'team';
+    pluralName: 'teams';
+    displayName: 'Team';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Position: Attribute.String;
+    Email: Attribute.Email;
+    Image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::team.team', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::team.team', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1011,6 +1041,7 @@ declare module '@strapi/types' {
       'api::page.page': ApiPagePage;
       'api::sponsor.sponsor': ApiSponsorSponsor;
       'api::step.step': ApiStepStep;
+      'api::team.team': ApiTeamTeam;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }
   }

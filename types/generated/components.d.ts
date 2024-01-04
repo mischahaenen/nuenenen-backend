@@ -28,7 +28,8 @@ export interface PagesContact extends Schema.Component {
 export interface PagesDocument extends Schema.Component {
   collectionName: 'components_pages_documents';
   info: {
-    displayName: 'Document';
+    displayName: 'Documents';
+    description: '';
   };
   attributes: {
     files: Attribute.Media;
@@ -69,7 +70,7 @@ export interface PagesImage extends Schema.Component {
 export interface PagesKastenzeddel extends Schema.Component {
   collectionName: 'components_pages_kastenzeddels';
   info: {
-    displayName: 'Kastenzeddel';
+    displayName: 'Aktivit\u00E4t';
     description: '';
   };
   attributes: {
@@ -94,6 +95,20 @@ export interface PagesPfadiheim extends Schema.Component {
     Description: Attribute.RichText;
     images: Attribute.Media;
     iFrame: Attribute.String;
+  };
+}
+
+export interface PagesQuartalsprogramm extends Schema.Component {
+  collectionName: 'components_pages_quartalsprogramms';
+  info: {
+    displayName: 'Quartalsprogramm';
+    icon: 'calendar';
+    description: '';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Image: Attribute.Media;
+    Document: Attribute.Media;
   };
 }
 
@@ -169,6 +184,7 @@ declare module '@strapi/types' {
       'pages.image': PagesImage;
       'pages.kastenzeddel': PagesKastenzeddel;
       'pages.pfadiheim': PagesPfadiheim;
+      'pages.quartalsprogramm': PagesQuartalsprogramm;
       'pages.section': PagesSection;
       'pages.sponsors': PagesSponsors;
       'pages.steps': PagesSteps;

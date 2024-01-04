@@ -1,17 +1,14 @@
 {
-  "collectionName": "components_pages_sections",
+  "collectionName": "components_pages_quartalsprogramms",
   "info": {
-    "displayName": "section",
-    "icon": "bars",
+    "displayName": "Quartalsprogramm",
+    "icon": "calendar",
     "description": ""
   },
   "options": {},
   "attributes": {
     "Title": {
       "type": "string"
-    },
-    "Description": {
-      "type": "richtext"
     },
     "Image": {
       "type": "media",
@@ -23,6 +20,16 @@
         "videos",
         "audios"
       ]
+    },
+    "Document": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
