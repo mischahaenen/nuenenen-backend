@@ -1,7 +1,6 @@
 // ./src/api/contact/controllers/contact.js
 
 import { factories } from "@strapi/strapi";
-import { sanitize, validate } from "@strapi/utils";
 interface Contact {
   data: {
     formData: {
@@ -20,11 +19,12 @@ export default factories.createCoreController(
   ({ strapi }) => ({
     async create(ctx) {
       try {
-        await this.validateQuery(ctx);
-        await this.validateInput(ctx.request, ctx);
         const request: Contact = ctx.request.body as Contact;
-        //TODO Sanitize the input parameters returns {}
-        //const input: any = await this.sanitizeInput(ctx.request, ctx);
+        // Sanitize the input data
+        const sanitizedInput = await this.sanitizeInput(
+          request.data.formData,
+          ctx
+        );
         const verification = await strapi.services[
           "api::contact.recaptcha"
         ].validate(request.data.token);
@@ -37,13 +37,12 @@ export default factories.createCoreController(
         // Store the contact message in the database
         await strapi.entityService.create("api::contact.contact", {
           data: {
-            ...(request.data.formData as any),
+            ...sanitizedInput,
             Score: verification.score,
           },
         });
 
         const formData = request.data.formData;
-
         const contact = await strapi
           .service("api::contact-distribution-list.contact-distribution-list")
           .findOne(formData.contactOption, {});
@@ -90,6 +89,7 @@ export default factories.createCoreController(
 
         ctx.body = "Contact message submitted successfully";
       } catch (err) {
+        console.log(err);
         ctx.status = 500;
         ctx.body = `Internal server error: ${JSON.stringify(err)}`;
         console.error(`Internal server error: ${JSON.stringify(err)}`);
