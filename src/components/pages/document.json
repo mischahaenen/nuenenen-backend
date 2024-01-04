@@ -1,19 +1,21 @@
 {
   "collectionName": "components_pages_documents",
   "info": {
-    "displayName": "Document"
+    "displayName": "Documents",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "Title": {
       "type": "string"

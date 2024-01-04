@@ -1,36 +1,34 @@
 {
   "name": "nuenenen-backend",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "description": "Official Scouting Nünenen Headless CMS Backend",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
-  },
-  "dependencies": {
-    "@strapi/plugin-graphql": "4.15.5",
-    "@strapi/plugin-i18n": "4.15.5",
-    "@strapi/plugin-users-permissions": "4.15.5",
-    "@strapi/provider-email-sendgrid": "^4.15.5",
-    "@strapi/provider-upload-aws-s3": "^4.15.5",
-    "@strapi/strapi": "4.15.5",
-    "axios": "^1.4.0",
-    "better-sqlite3": "^7.4.6",
-    "pg": "^8.11.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^5.3.4",
-    "strapi-plugin-populate-deep": "^3.0.0",
-    "strapi-plugin-react-editorjs": "^2.0.1",
-    "styled-components": "^5.3.11"
-  },
+  "license": "MIT",
   "author": {
     "name": "Mischa Haenen (mischahaenen@gmail.com)"
   },
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.7.0",
+    "@strapi/plugin-users-permissions": "4.7.0",
+    "@strapi/provider-email-sendgrid": "^4.15.5",
+    "@strapi/provider-upload-aws-s3": "^4.15.5",
+    "@strapi/strapi": "4.7.0",
+    "axios": "^1.4.0",
+    "better-sqlite3": "7.4.6",
+    "pg": "^8.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
+    "strapi-plugin-populate-deep": "^3.0.0",
+    "styled-components": "^5.3.11"
+  },
   "strapi": {
     "uuid": "5b7ac261-183d-4230-b2b5-8cba6e882867"
-  },
-  "license": "MIT"
+  }
 }

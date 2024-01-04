@@ -37,7 +37,9 @@
         "pages.image",
         "pages.group",
         "pages.document",
-        "pages.kastenzeddel"
+        "pages.kastenzeddel",
+        "pages.quartalsprogramm",
+        "pages.testimonials"
       ]
     }
   }
