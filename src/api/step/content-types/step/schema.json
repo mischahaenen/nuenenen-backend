@@ -15,9 +15,6 @@
     "Name": {
       "type": "string"
     },
-    "Description": {
-      "type": "richtext"
-    },
     "logo": {
       "type": "media",
       "multiple": false,
@@ -41,6 +38,9 @@
         "pages.quartalsprogramm",
         "pages.testimonials"
       ]
+    },
+    "Description": {
+      "type": "text"
     }
   }
 }
