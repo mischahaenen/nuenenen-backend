@@ -32,4 +32,23 @@ export default ({ env }) => ({
       defaultDepth: 5,
     },
   },
+  'strapi-plugin-sso': {
+    enabled: true,
+    config: {
+      // OpenID Connect
+      OIDC_CLIENT_ID: 'Aa-k4SVIpHWrPQvZQCseh4lDYlrxE1FbYtT4RIWjh44',
+      OIDC_CLIENT_SECRET: 'RrwEp7WbZVqkF2Cl3eLl96GEe2xKkMDUSut2hBcYrKY',
+
+      OIDC_SCOPES: 'openid email name', // https://oauth.net/2/scope/
+      // API Endpoints required for OIDC
+      OIDC_AUTHORIZATION_ENDPOINT: 'https://pbs.puzzle.ch/oauth/authorize',
+      OIDC_TOKEN_ENDPOINT: 'https://pbs.puzzle.ch/oauth/token',
+      OIDC_USER_INFO_ENDPOINT: 'https://pbs.puzzle.ch/oauth/userinfo',
+      OIDC_USER_INFO_ENDPOINT_WITH_AUTH_HEADER: false,
+      OIDC_GRANT_TYPE: 'authorization_code', // https://oauth.net/2/grant-types/
+      // customizable username arguments
+      OIDC_FAMILY_NAME_FIELD: 'last_name',
+      OIDC_GIVEN_NAME_FIELD: 'first_name',
+    }
+  }
 });
