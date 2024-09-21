@@ -14,19 +14,22 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.7.0",
+    "@strapi/plugin-i18n": "4.7.1",
     "@strapi/plugin-users-permissions": "4.7.0",
     "@strapi/provider-email-sendgrid": "^4.15.5",
     "@strapi/provider-upload-aws-s3": "^4.15.5",
-    "@strapi/strapi": "4.7.0",
-    "axios": "^1.4.0",
+    "@strapi/strapi": "4.7.1",
+    "axios": "^1.7.7",
     "better-sqlite3": "7.4.6",
-    "pg": "^8.11.0",
-    "react": "^18.2.0",
+    "pg": "^8.13.0",
+    "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1",
     "strapi-plugin-populate-deep": "^3.0.0",
-    "styled-components": "^5.3.11"
+    "styled-components": "^6.1.13"
+  },
+  "engines": {
+    "node": "18"
   },
   "strapi": {
     "uuid": "5b7ac261-183d-4230-b2b5-8cba6e882867"
