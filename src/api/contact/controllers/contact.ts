@@ -21,10 +21,10 @@ export default factories.createCoreController(
       try {
         const request: Contact = ctx.request.body as Contact;
         // Sanitize the input data
-        const sanitizedInput = await this.sanitizeInput(
+        const sanitizedInput = (await this.sanitizeInput(
           request.data.formData,
-          ctx
-        );
+          ctx,
+        )) as Record<string, any>;
         const verification = await strapi.services[
           "api::contact.recaptcha"
         ].validate(request.data.token);
@@ -95,5 +95,5 @@ export default factories.createCoreController(
         console.error(`Internal server error: ${JSON.stringify(err)}`);
       }
     },
-  })
+  }),
 );
