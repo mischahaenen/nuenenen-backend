@@ -1,182 +1,182 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface PagesBlog extends Schema.Component {
+export interface PagesBlog extends Struct.ComponentSchema {
   collectionName: 'components_pages_blogs';
   info: {
+    description: '';
     displayName: 'Blog';
     icon: 'blog';
-    description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    Description: Attribute.RichText;
+    Description: Schema.Attribute.RichText;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesContact extends Schema.Component {
+export interface PagesContact extends Struct.ComponentSchema {
   collectionName: 'components_pages_contacts';
   info: {
-    displayName: 'Contact';
     description: '';
+    displayName: 'Contact';
   };
   attributes: {
-    Title: Attribute.String;
-    Description: Attribute.RichText;
+    Description: Schema.Attribute.RichText;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesDocument extends Schema.Component {
+export interface PagesDocument extends Struct.ComponentSchema {
   collectionName: 'components_pages_documents';
   info: {
-    displayName: 'Documents';
     description: '';
+    displayName: 'Documents';
   };
   attributes: {
-    files: Attribute.Media;
-    Title: Attribute.String;
+    files: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesGroup extends Schema.Component {
+export interface PagesGroup extends Struct.ComponentSchema {
   collectionName: 'components_pages_groups';
   info: {
+    description: '';
     displayName: 'Team';
     icon: 'photo-video';
-    description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    members: Attribute.Relation<
-      'pages.group',
-      'oneToMany',
-      'plugin::users-permissions.user'
-    >;
+    leaders: Schema.Attribute.Relation<'oneToMany', 'api::team.team'>;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesImage extends Schema.Component {
+export interface PagesImage extends Struct.ComponentSchema {
   collectionName: 'components_pages_images';
   info: {
+    description: '';
     displayName: 'Image';
     icon: 'file-image';
-    description: '';
   };
   attributes: {
-    images: Attribute.Media;
-    Title: Attribute.String;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesKastenzeddel extends Schema.Component {
+export interface PagesKastenzeddel extends Struct.ComponentSchema {
   collectionName: 'components_pages_kastenzeddels';
   info: {
-    displayName: 'Aktivit\u00E4t';
     description: '';
+    displayName: 'Aktivit\u00E4t';
   };
   attributes: {
-    Title: Attribute.String;
-    Description: Attribute.RichText;
-    StartDate: Attribute.Date;
-    EndDate: Attribute.Date;
-    Location: Attribute.String;
-    StartTime: Attribute.Time;
-    EndTime: Attribute.Time;
+    Description: Schema.Attribute.RichText;
+    EndDate: Schema.Attribute.Date;
+    EndTime: Schema.Attribute.Time;
+    Location: Schema.Attribute.String;
+    StartDate: Schema.Attribute.Date;
+    StartTime: Schema.Attribute.Time;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesPfadiheim extends Schema.Component {
+export interface PagesPfadiheim extends Struct.ComponentSchema {
   collectionName: 'components_pages_pfadiheims';
   info: {
-    displayName: 'Pfadiheim';
     description: '';
+    displayName: 'Pfadiheim';
   };
   attributes: {
-    Title: Attribute.String;
-    Description: Attribute.RichText;
-    images: Attribute.Media;
-    iFrame: Attribute.String;
+    Description: Schema.Attribute.RichText;
+    iFrame: Schema.Attribute.String;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesQuartalsprogramm extends Schema.Component {
+export interface PagesQuartalsprogramm extends Struct.ComponentSchema {
   collectionName: 'components_pages_quartalsprogramms';
   info: {
+    description: '';
     displayName: 'Quartalsprogramm';
     icon: 'calendar';
-    description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    Image: Attribute.Media;
-    Document: Attribute.Media;
+    Document: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesSection extends Schema.Component {
+export interface PagesSection extends Struct.ComponentSchema {
   collectionName: 'components_pages_sections';
   info: {
+    description: '';
     displayName: 'section';
     icon: 'bars';
-    description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    Description: Attribute.RichText;
-    Image: Attribute.Media;
+    Description: Schema.Attribute.RichText;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesSponsors extends Schema.Component {
+export interface PagesSponsors extends Struct.ComponentSchema {
   collectionName: 'components_pages_sponsors';
   info: {
+    description: '';
     displayName: 'Sponsors';
     icon: 'gift';
-    description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    sponsors: Attribute.Relation<
-      'pages.sponsors',
-      'oneToMany',
-      'api::sponsor.sponsor'
-    >;
-    Description: Attribute.RichText;
+    Description: Schema.Attribute.RichText;
+    sponsors: Schema.Attribute.Relation<'oneToMany', 'api::sponsor.sponsor'>;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesSteps extends Schema.Component {
+export interface PagesSteps extends Struct.ComponentSchema {
   collectionName: 'components_pages_steps';
   info: {
+    description: '';
     displayName: 'Steps';
     icon: 'archway';
-    description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    Description: Attribute.RichText;
-    steps: Attribute.Relation<'pages.steps', 'oneToMany', 'api::step.step'>;
+    Description: Schema.Attribute.RichText;
+    steps: Schema.Attribute.Relation<'oneToMany', 'api::step.step'>;
+    Title: Schema.Attribute.String;
   };
 }
 
-export interface PagesTestimonials extends Schema.Component {
+export interface PagesTestimonials extends Struct.ComponentSchema {
   collectionName: 'components_pages_testimonials';
   info: {
     displayName: 'Testimonials';
   };
   attributes: {
-    Title: Attribute.String;
-    Subtitle: Attribute.String;
-    testimonials: Attribute.Relation<
-      'pages.testimonials',
+    Subtitle: Schema.Attribute.String;
+    testimonials: Schema.Attribute.Relation<
       'oneToMany',
       'api::testimonial.testimonial'
     >;
+    Title: Schema.Attribute.String;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
       'pages.blog': PagesBlog;
       'pages.contact': PagesContact;
       'pages.document': PagesDocument;

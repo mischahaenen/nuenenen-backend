@@ -35,7 +35,7 @@ export default factories.createCoreController(
           return;
         }
         // Store the contact message in the database
-        await strapi.entityService.create("api::contact.contact", {
+        await strapi.documents("api::contact.contact").create({
           data: {
             ...sanitizedInput,
             Score: verification.score,
