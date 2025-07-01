@@ -31,9 +31,6 @@
       "relation": "oneToOne",
       "target": "admin::user"
     },
-    "description": {
-      "type": "richtext"
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -45,6 +42,9 @@
     },
     "Rolle": {
       "type": "string"
+    },
+    "description": {
+      "type": "blocks"
     }
   }
 }

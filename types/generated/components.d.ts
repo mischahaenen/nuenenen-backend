@@ -8,7 +8,7 @@ export interface PagesBlog extends Struct.ComponentSchema {
     icon: 'blog';
   };
   attributes: {
-    Description: Schema.Attribute.RichText;
+    Description: Schema.Attribute.Blocks;
     Title: Schema.Attribute.String;
   };
 }
@@ -20,7 +20,7 @@ export interface PagesContact extends Struct.ComponentSchema {
     displayName: 'Contact';
   };
   attributes: {
-    Description: Schema.Attribute.RichText;
+    Description: Schema.Attribute.Blocks;
     Title: Schema.Attribute.String;
   };
 }
@@ -76,7 +76,7 @@ export interface PagesKastenzeddel extends Struct.ComponentSchema {
     displayName: 'Aktivit\u00E4t';
   };
   attributes: {
-    Description: Schema.Attribute.RichText;
+    Description: Schema.Attribute.Blocks;
     EndDate: Schema.Attribute.Date;
     EndTime: Schema.Attribute.Time;
     Location: Schema.Attribute.String;
@@ -93,7 +93,7 @@ export interface PagesPfadiheim extends Struct.ComponentSchema {
     displayName: 'Pfadiheim';
   };
   attributes: {
-    Description: Schema.Attribute.RichText;
+    Description: Schema.Attribute.Blocks;
     iFrame: Schema.Attribute.String;
     images: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
@@ -125,22 +125,8 @@ export interface PagesSection extends Struct.ComponentSchema {
     icon: 'bars';
   };
   attributes: {
-    Description: Schema.Attribute.RichText;
+    Description: Schema.Attribute.Blocks;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Title: Schema.Attribute.String;
-  };
-}
-
-export interface PagesSponsors extends Struct.ComponentSchema {
-  collectionName: 'components_pages_sponsors';
-  info: {
-    description: '';
-    displayName: 'Sponsors';
-    icon: 'gift';
-  };
-  attributes: {
-    Description: Schema.Attribute.RichText;
-    sponsors: Schema.Attribute.Relation<'oneToMany', 'api::sponsor.sponsor'>;
     Title: Schema.Attribute.String;
   };
 }
@@ -153,23 +139,8 @@ export interface PagesSteps extends Struct.ComponentSchema {
     icon: 'archway';
   };
   attributes: {
-    Description: Schema.Attribute.RichText;
+    Description: Schema.Attribute.Blocks;
     steps: Schema.Attribute.Relation<'oneToMany', 'api::step.step'>;
-    Title: Schema.Attribute.String;
-  };
-}
-
-export interface PagesTestimonials extends Struct.ComponentSchema {
-  collectionName: 'components_pages_testimonials';
-  info: {
-    displayName: 'Testimonials';
-  };
-  attributes: {
-    Subtitle: Schema.Attribute.String;
-    testimonials: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::testimonial.testimonial'
-    >;
     Title: Schema.Attribute.String;
   };
 }
@@ -186,9 +157,7 @@ declare module '@strapi/strapi' {
       'pages.pfadiheim': PagesPfadiheim;
       'pages.quartalsprogramm': PagesQuartalsprogramm;
       'pages.section': PagesSection;
-      'pages.sponsors': PagesSponsors;
       'pages.steps': PagesSteps;
-      'pages.testimonials': PagesTestimonials;
     }
   }
 }
