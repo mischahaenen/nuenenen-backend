@@ -9,7 +9,7 @@
   },
   "scripts": {
     "prebuild": "npm rebuild",
-    "build": "strapi build",
+    "build": "strapi build --minify false --debug",
     "console": "strapi console",
     "deploy": "strapi deploy",
     "dev": "strapi develop",
