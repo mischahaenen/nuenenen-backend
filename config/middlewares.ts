@@ -4,15 +4,12 @@ export default [
   {
     name: "strapi::security",
     config: {
-      contentSecurityPolicy: {
-        useDefaults: true,
-        directives: {
-          "connect-src": ["'self'", "https:"],
-          "img-src": ["*"],
-          "media-src": ["*"],
-          upgradeInsecureRequests: null,
-        },
-      },
+       directives: {
+              'connect-src': ["'self'", 'https:'],
+              'img-src': ["*"],
+              'media-src': ["*"],
+              upgradeInsecureRequests: null,
+            },
     },
   },
   {

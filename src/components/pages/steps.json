@@ -11,7 +11,7 @@
       "type": "string"
     },
     "Description": {
-      "type": "richtext"
+      "type": "blocks"
     },
     "steps": {
       "type": "relation",

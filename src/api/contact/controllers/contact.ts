@@ -1,6 +1,7 @@
 // ./src/api/contact/controllers/contact.js
 
 import { factories } from "@strapi/strapi";
+import { log } from 'console';
 interface Contact {
   data: {
     formData: {
@@ -21,21 +22,24 @@ export default factories.createCoreController(
       try {
         const request: Contact = ctx.request.body as Contact;
         // Sanitize the input data
-        const sanitizedInput = await this.sanitizeInput(
+        const sanitizedInput = (await this.sanitizeInput(
           request.data.formData,
-          ctx
-        );
+          ctx,
+        )) as Record<string, any>;
+        log(`Sanitized input: ${JSON.stringify(sanitizedInput)}`);
         const verification = await strapi.services[
           "api::contact.recaptcha"
         ].validate(request.data.token);
         // If the captcha is invalid or the score is below 0.5, return an error response
+        log(`Captcha verification result: ${JSON.stringify(verification)}`);
+
         if (!verification.valid || verification.score < 0.5) {
           ctx.status = 400;
           ctx.body = "Captcha verification failed";
           return;
         }
         // Store the contact message in the database
-        await strapi.entityService.create("api::contact.contact", {
+        await strapi.documents("api::contact.contact").create({
           data: {
             ...sanitizedInput,
             Score: verification.score,
@@ -46,6 +50,8 @@ export default factories.createCoreController(
         const contact = await strapi
           .service("api::contact-distribution-list.contact-distribution-list")
           .findOne(formData.contactOption, {});
+
+        log(`Contact distribution list: ${JSON.stringify(contact)}`);
 
         await strapi.plugins["email"].services.email.send({
           to: contact.Email,
@@ -95,5 +101,5 @@ export default factories.createCoreController(
         console.error(`Internal server error: ${JSON.stringify(err)}`);
       }
     },
-  })
+  }),
 );

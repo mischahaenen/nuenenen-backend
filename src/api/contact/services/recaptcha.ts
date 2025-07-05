@@ -9,13 +9,11 @@ export default {
         {
           params: {
             secret:
-              process.env.RECAPTCHA_SECRET ||
-              "6Ld0QeYmAAAAAJUscqYagXnXV6TsxF__R27FyVK4",
+              process.env.RECAPTCHA_SECRET,
             response: token,
           },
         }
       );
-
       const { success, score } = response.data;
       return {
         valid: success,

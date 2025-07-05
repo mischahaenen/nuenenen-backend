@@ -10,7 +10,7 @@
       "type": "string"
     },
     "Description": {
-      "type": "richtext"
+      "type": "blocks"
     },
     "StartDate": {
       "type": "date"
