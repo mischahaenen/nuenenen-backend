@@ -26,9 +26,12 @@ export default ({ env }) => ({
   },
   email: {
     config: {
-      provider: "sendgrid",
+      provider: 'amazon-ses',
       providerOptions: {
-        apiKey: env("SENDGRID_API_KEY"),
+        key: env('AWS_SES_KEY'),
+        secret: env('AWS_SES_SECRET'),
+        amazon: 'https://email.eu-central-1.amazonaws.com',
+        region: 'eu-central-1',
       },
       settings: {
         defaultFrom: "hallo@pfadi-nuenenen.ch",
