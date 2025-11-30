@@ -23,7 +23,7 @@
     "@strapi/provider-email-amazon-ses": "^5.31.2",
     "@strapi/provider-upload-aws-s3": "5.31.2",
     "@strapi/strapi": "5.31.2",
-    "axios": "^1.9.0",
+    "axios": "^1.13.2",
     "better-sqlite3": "12.5.0",
     "pg": "^8.16.3",
     "react": "^18.0.0",
