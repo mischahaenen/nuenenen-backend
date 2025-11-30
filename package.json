@@ -8,7 +8,6 @@
     "name": "Mischa Haenen (mischahaenen@gmail.com)"
   },
   "scripts": {
-    "prebuild": "npm rebuild",
     "build": "strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
@@ -20,17 +19,17 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "5.17.0",
-    "@strapi/provider-email-amazon-ses": "^5.22.0",
-    "@strapi/provider-upload-aws-s3": "5.17.0",
-    "@strapi/strapi": "5.17.0",
+    "@strapi/plugin-users-permissions": "5.31.2",
+    "@strapi/provider-email-amazon-ses": "^5.31.2",
+    "@strapi/provider-upload-aws-s3": "5.31.2",
+    "@strapi/strapi": "5.31.2",
     "axios": "^1.9.0",
-    "better-sqlite3": "11.10.0",
-    "pg": "^8.16.0",
+    "better-sqlite3": "12.5.0",
+    "pg": "^8.16.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
-    "styled-components": "^6.1.18"
+    "react-router-dom": "^6.0.2",
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -39,7 +38,8 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": "18.x"
+    "node": ">=20.0.0 <=24.x.x",
+    "npm": ">=6.0.0"
   },
   "strapi": {
     "uuid": "5b7ac261-183d-4230-b2b5-8cba6e882867"
